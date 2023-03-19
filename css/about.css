@@ -1,0 +1,179 @@
+/* Start Variables */
+:root {
+    --sky: #E4E6F4;
+    --black: #212225;
+    --green: #3D9A94;
+    --gray: #a2a2a2;
+    --section-padding: 60px;
+    --transition-duration: 0.4s;
+}
+/* End Variables */
+/* Start Landing Section */
+.landing {
+    background: url("../images/about/banner.avif") no-repeat;
+    background-size: cover;
+    padding: calc(var(--section-padding) + 20px) 0;
+}
+
+.landing .text {
+    color: #fff;
+    text-align: center;
+}
+
+.landing .text h1 {
+    font-size: 45px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+/* End Landing Section */
+/* Start About Section */
+.about {
+    padding: var(--section-padding) 0;
+}
+
+.about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .image {
+    width: 500px;
+    max-width: 100%;
+}
+
+.about .about-content .image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.about .about-content:first-child .text {
+    width: calc(100% - 540px);
+}
+
+.about .about-content:first-child .text h2 {
+    color: var(--black);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about .about-content .text p {
+    color: var(--gray);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about .about-content:first-child .text a {
+    color: var(--green);
+    border-bottom: 1px dotted var(--green);
+}
+
+.about .about-content:last-child {
+    margin-top: 50px;
+}
+
+.about .about-content:last-child .text {
+    width: calc(100% - 500px);
+}
+
+.about .about-content:last-child .text h2 {
+    color: var(--green);
+    font-size: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.about .about-content:last-child .text h2::after {
+    content: "";
+    background-color: var(--green);
+    width: 100px;
+    height: 5px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+
+.about .about-content:last-child .text h2 span {
+    color: var(--sky);
+}
+
+.about .about-content:last-child .text p {
+    line-height: 1.6;
+}
+
+.about .about-content:last-child .text .btn {
+    background-color: var(--green);
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid var(--green);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all var(--transition-duration);
+    -webkit-transition: all var(--transition-duration);
+    -moz-transition: all var(--transition-duration);
+    -ms-transition: all var(--transition-duration);
+    -o-transition: all var(--transition-duration);
+}
+
+.about .about-content:last-child .text .btn:hover {
+    background-color: #fff;
+    color: var(--green);
+}
+
+/* Small & Mobile Screens */
+@media (max-width: 991px) {
+    .about .about-content {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .about .about-content .text {
+        width: 100% !important;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .about .about-content:last-child {
+        flex-direction: column-reverse;
+    }
+    .about .about-content:last-child .text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+}
+/* End About Section */
+/* Start Video Section */
+.video .container {
+    text-align: center;
+}
+
+.video .container .section-heading a {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.video .container video {
+    width: 600px;
+    max-width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+/* End Video Section */

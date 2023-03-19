@@ -1,0 +1,52 @@
+/* Start Variables */
+:root {
+    --sky: #E4E6F4;
+    --black: #212225;
+    --green: #3D9A94;
+    --gray: #a2a2a2;
+    --section-padding: 60px;
+    --transition-duration: 0.4s;
+}
+/* End Variables */
+/* Start Component */
+section {
+    padding: var(--section-padding) 0;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+/* End Component */
+/* Start Landing Section */
+.landing {
+    background: url("../images/pages_bgs/b1.avif") no-repeat center;
+    background-size: cover;
+    padding: calc(var(--section-padding) + 20px) 0;
+}
+
+.landing .text {
+    color: #fff;
+    text-align: center;
+}
+
+.landing .text h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+/* End Landing Section */
+.jackets .product img,
+.blouses .product img {
+    height: 190px;
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+    .jackets .product img,
+    .blouses .product img {
+        height: 270px;
+    }
+}
